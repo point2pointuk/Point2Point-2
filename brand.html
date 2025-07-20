@@ -88,6 +88,65 @@
           </div>
         </section>
 
+        <!-- Brand Assets Section (Tailwind) -->
+        <section id="assets" class="py-24 bg-[#0a0a0a]">
+          <div class="max-w-6xl mx-auto px-4">
+            <div class="mb-12 text-center">
+              <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-800 bg-clip-text text-transparent">Brand Assets</h2>
+              <p class="text-lg text-gray-300 mb-8">
+                Download and preview our official brand assets. Click any image to view fullscreen and download.
+              </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+              <!-- Card 1: Wordmark -->
+              <div class="bg-white/5 rounded-xl p-8 border border-[#1d546b]/20 shadow flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-white mb-4">Wordmark</h3>
+                <div class="flex flex-col gap-4">
+                  <img src="/assets/branding/SVG/Full Colour Wordmark.svg" alt="Wordmark Full Colour" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark - Full Colour" data-svg="/assets/branding/SVG/Full Colour Wordmark.svg" data-png="/assets/branding/PNG/Full Colour Wordmark.png">
+                  <img src="/assets/branding/SVG/Transparent White Wordmark.svg" alt="Wordmark Transparent White" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark - Transparent White" data-svg="/assets/branding/SVG/Transparent White Wordmark.svg" data-png="/assets/branding/PNG/Transparent White Wordmark.png">
+                  <img src="/assets/branding/SVG/Transparent Azure Wordmark.svg" alt="Wordmark Transparent Azure" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark - Transparent Azure" data-svg="/assets/branding/SVG/Transparent Azure Wordmark.svg" data-png="/assets/branding/PNG/Transparent Azure Wordmark.png">
+                </div>
+              </div>
+              <!-- Card 2: Wordmark with Icon -->
+              <div class="bg-white/5 rounded-xl p-8 border border-[#1d546b]/20 shadow flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-white mb-4">Wordmark with Icon</h3>
+                <div class="flex flex-col gap-4">
+                  <img src="/assets/branding/SVG/Full Colour Wordmark with Logo.svg" alt="Wordmark+Icon Full Colour" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark+Icon - Full Colour" data-svg="/assets/branding/SVG/Full Colour Wordmark with Logo.svg" data-png="/assets/branding/PNG/Full Colour Wordmark with Logo.png">
+                  <img src="/assets/branding/SVG/Transparent White Wordmark with Logo.svg" alt="Wordmark+Icon Transparent White" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark+Icon - Transparent White" data-svg="/assets/branding/SVG/Transparent White Wordmark with Logo.svg" data-png="/assets/branding/PNG/Transparent White Wordmark with Logo.png">
+                  <img src="/assets/branding/SVG/Transparent Azure Wordmark with Logo.svg" alt="Wordmark+Icon Transparent Azure" class="rounded cursor-pointer asset-img max-h-32" data-title="Wordmark+Icon - Transparent Azure" data-svg="/assets/branding/SVG/Transparent Azure Wordmark with Logo.svg" data-png="/assets/branding/PNG/Transparent Azure Wordmark with Logo.png">
+                </div>
+              </div>
+              <!-- Card 3: Icon -->
+              <div class="bg-white/5 rounded-xl p-8 border border-[#1d546b]/20 shadow flex flex-col items-center">
+                <h3 class="text-xl font-semibold text-white mb-4">Icon</h3>
+                <div class="flex flex-col gap-4">
+                  <img src="/assets/branding/SVG/Full Colour Icon.svg" alt="Icon Full Colour" class="rounded cursor-pointer asset-img max-h-32" data-title="Icon - Full Colour" data-svg="/assets/branding/SVG/Full Colour Icon.svg" data-png="/assets/branding/PNG/Full Colour Icon.png">
+                  <img src="/assets/branding/SVG/Transparent White Icon.svg" alt="Icon Transparent White" class="rounded cursor-pointer asset-img max-h-16" data-title="Icon - Transparent White" data-svg="/assets/branding/SVG/Transparent White Icon.svg" data-png="/assets/branding/PNG/Transparent White Icon.png">
+                  <img src="/assets/branding/SVG/Transparent Azure Icon.svg" alt="Icon Transparent Azure" class="rounded cursor-pointer asset-img max-h-16" data-title="Icon - Transparent Azure" data-svg="/assets/branding/SVG/Transparent Azure Icon.svg" data-png="/assets/branding/PNG/Transparent Azure Icon.png">
+                  <img src="/assets/branding/favicon.svg" alt="Favicon" class="rounded cursor-pointer asset-img max-h-16" data-title="Favicon" data-svg="/assets/branding/favicon.svg" data-png="N/A" data-finalised="false">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal for Asset Preview -->
+        <div id="assetModal" class="fixed inset-0 z-[9999] bg-black/80 flex items-center justify-center hidden">
+          <div class="bg-[#181e24] rounded-xl shadow-lg p-6 relative max-w-lg w-full flex flex-col items-center">
+            <button id="closeModal" class="absolute top-3 right-3 text-gray-400 hover:text-white text-2xl">&times;</button>
+            <h4 id="modalTitle" class="text-lg font-semibold text-white mb-4"></h4>
+            <img id="modalImg" src="" alt="Asset Preview" class="w-full max-h-[60vh] object-contain rounded mb-6 bg-white/10 p-4" />
+            <div id="notFinalisedDisclaimer" class="hidden text-yellow-300 text-sm mb-4 text-center">
+              <i class="fa fa-exclamation-triangle mr-2"></i>
+              This asset is <b>not finalised</b> and may change soon.
+            </div>
+            <div class="flex gap-4">
+              <a id="downloadSVG" href="#" download class="px-6 py-3 rounded-lg font-semibold bg-gradient-to-r from-cyan-400 to-blue-800 text-white shadow hover:-translate-y-1 transition">Download as SVG</a>
+              <a id="downloadPNG" href="#" download class="px-6 py-3 rounded-lg font-semibold bg-gradient-to-r from-[#1d546b] to-[#2a6b83] text-white shadow hover:-translate-y-1 transition">Download as PNG</a>
+            </div>
+          </div>
+        </div>
+
         <!-- Footer (Tailwind) -->
         <footer id="contact" class="bg-black py-10">
           <div class="max-w-4xl mx-auto px-4">
@@ -98,5 +157,37 @@
         </footer>
 
         <script src="script.js"></script>
+        <script>
+        // Modal logic for asset preview
+        document.querySelectorAll('.asset-img').forEach(img => {
+          img.addEventListener('click', function() {
+            document.getElementById('modalImg').src = this.getAttribute('data-svg');
+            document.getElementById('modalTitle').textContent = this.getAttribute('data-title');
+            document.getElementById('downloadSVG').href = this.getAttribute('data-svg');
+            document.getElementById('downloadPNG').href = this.getAttribute('data-png');
+            document.getElementById('assetModal').classList.remove('hidden');
+            // PNG download button visibility
+            if(this.getAttribute('data-png')=="N/A") {
+              document.getElementById('downloadPNG').classList.add('hidden');
+            } else {
+              document.getElementById('downloadPNG').classList.remove('hidden');
+            }
+            // Finalised logic
+            if(this.getAttribute('data-finalised') === "false") {
+              document.getElementById('modalImg').classList.add('ring-2', 'ring-yellow-400');
+              document.getElementById('notFinalisedDisclaimer').classList.remove('hidden');
+            } else {
+              document.getElementById('modalImg').classList.remove('ring-2', 'ring-yellow-400');
+              document.getElementById('notFinalisedDisclaimer').classList.add('hidden');
+            }
+          });
+        });
+        document.getElementById('closeModal').onclick = function() {
+          document.getElementById('assetModal').classList.add('hidden');
+        };
+        document.getElementById('assetModal').addEventListener('click', function(e) {
+          if (e.target === this) this.classList.add('hidden');
+        });
+        </script>
     </body>
 </html>
