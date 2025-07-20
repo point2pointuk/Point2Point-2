@@ -123,6 +123,7 @@ function scrollToTop() {
 const scrollToTopBtn = document.createElement('button');
 scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
 scrollToTopBtn.className = 'scroll-to-top';
+// Use a blue gradient background similar to your site
 scrollToTopBtn.style.cssText = `
     position: fixed;
     bottom: 30px;
@@ -131,14 +132,18 @@ scrollToTopBtn.style.cssText = `
     height: 50px;
     border: none;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: linear-gradient(135deg, #22d3ee 0%, #1e40af 100%);
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     transition: all 0.3s ease;
     z-index: 1000;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 document.body.appendChild(scrollToTopBtn);
